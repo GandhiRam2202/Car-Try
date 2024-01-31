@@ -240,7 +240,10 @@ class Car{
 
 }
 
-const car = new Car('Black','AUID')
+const car = new Car('Sky Blue','AUDI')
+
+
+
 
 
 
