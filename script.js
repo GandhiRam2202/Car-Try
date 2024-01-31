@@ -298,19 +298,45 @@ gearDownBtn.addEventListener('click',function(){
 
 let rotate=0;
 rightBtn.addEventListener('click',function(){
-    rotate += 10;
-    if(rotate <= 40)
-    {
-    img.setAttribute('style',`transform:rotate(${rotate+'deg'})`)
 
+    if(getValue() === 'Started')
+    {
+        rotate += 10;
+        if(rotate <= 40)
+        {
+        img.setAttribute('style',`transform:rotate(${rotate+'deg'})`)
+    
+        }
     }
+    else
+    {
+        display.innerText = `First Start The Car`;
+    }
+
+
+
+   
 })
 
 leftBtn.addEventListener('click',function(){
-    rotate -= 10;
+
+    if(getValue() === 'Started')
+    {
+        rotate -= 10;
     if(rotate >= -40)
     {
     img.setAttribute('style',`transform:rotate(${rotate+'deg'})`)
 
     }
+    }
+    else
+    {
+        display.innerText = `First Start The Car`;
+    }
+
+
+
+
+
+    
 })
